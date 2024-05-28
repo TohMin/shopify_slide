@@ -1,0 +1,309 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+    @font-face {
+    font-family: 'Acumin Pro';
+    src: url('https://cdn.shopify.com/s/files/1/0632/8985/2055/files/Acumin_Pro_Bold.ttf?v=1716861182');
+    }
+    .swiper {
+    width: 100%;
+    height: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+    display: flex!important;
+    padding: 20px 20px;
+    border: #fff solid 1px;
+    color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+        .swiper-button-next,
+        .swiper-button-prev {
+        display: none!important;
+        }
+    }
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+    background-color: #fff;
+    transition-duration: 1s;
+    transition-duration: 1.5s;
+    transition-duration: 2s;
+    color: rgba(0, 0, 0, 0.299);
+    }
+
+    .swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .swiper-wrapper{
+            height: 500px;
+        }
+        .swiper-slide{
+            height: 100%;
+        }
+    }
+
+    .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+    background: linear-gradient(90deg, #151515 50%, #e6e6e6 0);
+    background-position: 100%;
+    background-size: 200% 100%;
+    border-radius: 0;
+    height: 4px;
+    margin: 0 8px 0 0 !important;
+    opacity: 1;
+    position: relative;
+    width: 33px;
+    }
+    .swiper-pagination-bullet.prev {
+    background: #e6e6e6;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-position: 0;
+    color: #e6e6e6;
+    opacity: 1;
+    transition: 3s linear;
+    }
+    .swiper-pagination-bullet:last-child {
+    margin-right: 0 !important;
+    }
+
+    .text-wrap {
+    position: absolute;
+    bottom: 320px;
+    left: 80px;
+    }
+    @media screen and (max-width: 768px) {
+        .text-wrap {
+        bottom: 70px;
+        left: 30px;
+        }
+    }
+    a {
+    text-decoration: none;
+    }
+
+    .spi {
+    padding-bottom: 0rem;
+    }
+
+    .spi .revive {
+    font-size: 108px;
+    line-height: 1;
+    font-family: "Acumin Pro";
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    }
+    @media screen and (max-width: 768px) {
+    .spi .revive {
+        font-size: 40px;
+    }
+    }
+
+    .btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    text-decoration: unset;
+    width: 200px;
+    height: 64px;
+    box-sizing: border-box;
+    }
+    .btn:hover::before {
+    animation: meltEnter 2s forwards;
+    }
+    .btn:hover::after {
+    color: #000;
+    z-index: 3;
+    }
+    .btn:hover span {
+    font-size: 20px;
+    font-weight: 500;
+    color: black !important;
+    z-index: 99;
+    }
+    .btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    }
+    .btn::after {
+    font-family: "swiper-icons";
+    font-size: 14px !important;
+    color: rgb(230, 230, 230);
+    cursor: pointer;
+    }
+    .btn span {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    color: #fff;
+    font-family: "Acumin Pro";
+    font-weight: bold;
+    }
+
+    @keyframes meltEnter {
+    0% {
+        background: #fff;
+        -webkit-clip-path: path("M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z");
+        clip-path: path("M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z");
+        cursor: pointer;
+    }
+    to {
+        background: #fff;
+        -webkit-clip-path: path("M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z");
+        clip-path: path("M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z");
+        cursor: pointer;
+    }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(230, 230, 230);
+    box-sizing: border-box;
+    }
+    .swiper-button-next:hover::before,
+    .swiper-button-prev:hover::before {
+    animation: meltEnter 2s forwards;
+    }
+    .swiper-button-next:hover::after,
+    .swiper-button-prev:hover::after {
+    color: #000;
+    z-index: 3;
+    }
+    .swiper-button-next::before,
+    .swiper-button-prev::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+    font-family: "swiper-icons";
+    font-size: 14px !important;
+    color: rgb(230, 230, 230);
+    cursor: pointer;
+    }
+
+    .swiper-button-next::after {
+    content: "next";
+    }
+
+    .swiper-button-prev::after {
+    content: "prev";
+    }
+
+    @media screen and (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+    }
+
+    @media screen and (min-width: 768px) {
+    .sp {
+        display: none;
+    }
+    }
+</style>
+
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        <img src="https://cdn.shopify.com/s/files/1/0632/8985/2055/files/can_water.jpg" alt="">
+        <div class="text-wrap">
+            <div class="spi">
+            <p class="revive" style="display: flex; flex-direction: column; justify-content: flex-start;">
+                <span>Revive</span>
+                <span>Your Spirit</span>
+            </p>
+            </div>
+            <div class="but">
+            <a href="https://back2life.jp/products/back2life-natural-water" class="btn">
+                <span class="">Shop Drink</span>
+            </a>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+        <video class="pc" autoplay muted playsinline loop src="https://cdn.shopify.com/videos/c/o/v/62ef89e0c1e94a988e87ed5c780686c7.mp4" preload="auto" width="100%"></video>
+        <video class="sp" autoplay muted playsinline loop src="https://cdn.shopify.com/videos/c/o/v/52dc65d1832c4e62a9ac434336630cbf.mp4" preload="auto" width="100%"></video>
+        <div class="text-wrap">
+            <div class="spi">
+            <p class="revive" style="display: flex; flex-direction: column; justify-content: flex-start;">
+                <span>Back 2 Life</span>
+                <span>Apparel</span>
+            </p>
+            </div>
+            <div class="but">
+            <a href="https://back2life.jp/collections/apparel" class="btn">
+                <span class="">Shop Apparel</span>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    // Initialize the Swiper
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        speed: 400,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+</script>
